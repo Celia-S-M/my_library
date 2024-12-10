@@ -23,10 +23,7 @@ security:
             stateless: true
             http_basic: ~
 
-    access_control:
-        - { path: ^/api/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/api/usuarios, roles: IS_AUTHENTICATED_ANONYMOUSLY }  # Permitir acceso anónimo a la creación de usuarios
-        - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
+
 
 when@test:
     security:

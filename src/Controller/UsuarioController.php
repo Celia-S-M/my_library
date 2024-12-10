@@ -44,7 +44,6 @@ class UsuarioController extends AbstractController
     #[Route('/{id}', name: 'api_usuarios_update', methods: ['PUT'])]
     public function update(int $id, Request $request, EntityManagerInterface $entityManager, UsuarioRepository $usuarioRepository, ValidatorInterface $validator): Response
     {
-        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
         $data = json_decode($request->getContent(), true);
         $usuario = $usuarioRepository->find($id);
@@ -72,7 +71,6 @@ class UsuarioController extends AbstractController
     #[Route('/{id}', name: 'api_usuarios_delete', methods: ['DELETE'])]
     public function delete(int $id, UsuarioRepository $usuarioRepository, EntityManagerInterface $entityManager): Response
     {
-        $this->denyAccessUnlessGranted('IS_AUTHENTICATED_FULLY');
 
         $usuario = $usuarioRepository->find($id);
 
