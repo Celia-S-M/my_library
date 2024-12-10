@@ -10,7 +10,6 @@ Libros:
 Usuarios:
 - GET /usuarios: Devuelve una lista de todos los usuarios.
 - POST /usuarios: Añade un nuevo usuario (nombre, email, password, edad).
-- PUT /usuarios/:id: Actualiza la información de un libro existente.
 - DELETE /usuarios/:id: Elimina un usuario.
 
 ## Requisitos
