@@ -1,0 +1,10 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+api_usuarios_new:
+    path: /api/usuarios
+    controller: App\Controller\UsuarioController::new
+    methods: POST
+
